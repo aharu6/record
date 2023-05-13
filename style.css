@@ -1,0 +1,10 @@
+.speech-bubble {
+  position: absolute;
+  display: none;
+  width: 150px;
+  height: 100px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px burlywood;
+}
