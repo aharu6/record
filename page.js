@@ -31,3 +31,8 @@ recognition.addEventListener("result", (event) => {
   textbox.textContent = transcript;
 });
 recognition.start();
+
+setTimeout(function() => {
+  location.reload();
+}, 5*60*1000);
+
