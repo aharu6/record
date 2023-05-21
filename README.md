@@ -1,6 +1,6 @@
 # record
 
-[**https://aharu6.github.io/record/**](https://aharu6.github.io/record/)
+[**https://aharu6.github.io/record/page.html**](https://aharu6.github.io/record/page.html)
 
 -   webspeechapi で遊んでみる
 
