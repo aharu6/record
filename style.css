@@ -1,18 +1,59 @@
+.backgroundimage {
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: (1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .speech-bubble {
+  position: relative;
+  display: none;
+  width: 150px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 5px #110c0d6d;
+}
+.speech-bubble.scalein {
+  animation-name: scale-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.speech-bubble.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+}
+.content {
   position: absolute;
   display: none;
   width: 150px;
-  height: 100px;
-  background-color: #dbdfaa;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 5px burlywood;
-}
-.content {
-  display: none;
-  width: 150px;
-  height: 100px;
-  color: #643843;
+  height: 90px;
+  border-radius: 50%;
+  color: #040303;
 }
 .popup {
   position: absolute;

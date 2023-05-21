@@ -15,6 +15,7 @@ recognition.addEventListener("result", (event) => {
     //boxset
     const bubble = document.createElement("div");
     bubble.classList.add("speech-bubble");
+    bubble.classList.add("scalein");  
     const textbox = document.createElement("div");
     textbox.classList.add("content");
     bubble.appendChild(textbox);
@@ -30,9 +31,16 @@ recognition.addEventListener("result", (event) => {
     bubble.style.left = `${xline}px`;
     bubble.style.top = `${yline}px`;
     bubble.style.display = "block";
+    bubble.addEventListener("click", function () {
+      this.classList.add("bounce");
+      this.classList.remove("scalein");
+      this.addEventListener("animationend", function () {
+        this.classList.remove("bounce");
+      });
+    });
 
-    textbox.style.left = `${xline}px`;
-    textbox.styletop = `${yline}px`;
+    //textbox.style.left = `${xline}px`;
+    //textbox.style.top = `${yline + 30}px`;
     textbox.style.display = "block";
 
     const splitword = transcript.split("");
